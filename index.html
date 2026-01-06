@@ -25,12 +25,12 @@
       <p>Choose a month:</p>
 
       <div class="months">
-        <button onclick="openLetter(1)">Month 1</button>
-        <button onclick="openLetter(2)">Month 2</button>
-        <button onclick="openLetter(3)">Month 3</button>
-        <button onclick="openLetter(4)">Month 4</button>
-        <button onclick="openLetter(5)">Month 5</button>
-        <button onclick="openLetter(6)">Month 6</button>
+        <button onclick="openLetter('july')">JULY</button>
+        <button onclick="openLetter('august')">AUGUST</button>
+        <button onclick="openLetter('september')">SEPTEMBER</button>
+        <button onclick="openLetter('october')">OCTOBER</button>
+        <button onclick="openLetter('november')">NOVEMBER</button>
+        <button onclick="openLetter('december')">DECEMBER</button>
       </div>
 
       <div id="popup" class="popup hidden">
@@ -47,4 +47,19 @@
   <script src="script.js"></script>
 
 </body>
+  <div id="hearts"></div>
+
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.innerText = "❤️";
+  heart.classList.add("heart");
+  heart.style.left = Math.random() * 100 + "%";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 4000);
+}
+
+setInterval(createHeart, 800);
+</script>
 </html>
