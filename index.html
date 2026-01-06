@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>For the boy I love</h1>
+    <p>Six months. Six moments. Six letters. Click below…</p>
+
+    <button onclick="showLetters()">Start</button>
+
+    <div id="letters" class="hidden">
+
+      <div class="envelope-area">
+        <div class="envelope"></div>
+      </div>
+
+      <p>Choose a month:</p>
+
+      <div class="months">
+        <button onclick="openLetter(1)">Month 1</button>
+        <button onclick="openLetter(2)">Month 2</button>
+        <button onclick="openLetter(3)">Month 3</button>
+        <button onclick="openLetter(4)">Month 4</button>
+        <button onclick="openLetter(5)">Month 5</button>
+        <button onclick="openLetter(6)">Month 6</button>
+      </div>
+
+      <div id="popup" class="popup hidden">
+        <div class="card">
+          <span class="close" onclick="closePopup()">×</span>
+          <p id="letterText"></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
